@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:title="좋아요"
+
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/busking_list"
+        android:enabled="true"
+        android:title="가볼래요"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/busking_regist"
+        android:enabled="true"
+        android:title="지난버스킹"
+        app:showAsAction="ifRoom" />
+
+</menu>

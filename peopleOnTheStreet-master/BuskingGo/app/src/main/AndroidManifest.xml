@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="buskinggo.seoul.com.buskinggo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".login.LoginActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".buskerInfo.BuskerInfoActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="buskinggo.seoul.com.buskinggo.MainActivity" />
+        </activity>
+        <activity android:name=".register.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".configure.ConfigureActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".configure.ChangeNicknameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".buskingInfo.BuskingInfoActivity"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="buskinggo.seoul.com.buskinggo.MainActivity" />
+        </activity>
+        <activity android:name=".configure.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".configure.RegisterBuskerActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".login.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".map.ChooseAddrMap"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home_white_24dp"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/busking_list"
+        android:enabled="true"
+        android:icon="@drawable/ic_view_list_white_24dp"
+        android:title="@string/buskinglist"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/busking_regist"
+        android:enabled="true"
+        android:icon="@drawable/ic_add_box_white_24dp"
+        android:title="@string/buskingRegister"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/my_page"
+        android:enabled="true"
+        android:icon="@drawable/ic_person_white_24dp"
+        android:title="@string/myPage"
+        app:showAsAction="ifRoom" />
+
+</menu>

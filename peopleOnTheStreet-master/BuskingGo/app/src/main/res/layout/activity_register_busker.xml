@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    tools:context=".configure.ConfigureActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginTop="16sp"
+                android:text="@string/busker_register"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_busker_register"
+                android:layout_below="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="16sp"
+                android:layout_marginEnd="16sp"
+                android:layout_marginBottom="16sp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/showImageFromGalleryButton"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/photo_border"
+                        android:contentDescription="@string/todo" />
+
+                    <ImageButton
+                        android:id="@+id/getImageFromGalleryButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/showImageFromGalleryButton"
+                        android:layout_alignBottom="@+id/showImageFromGalleryButton"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/ic_add_a_photo_black_24dp"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/todo" />
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/buskerNameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp"
+                    android:hint="@string/buskerInfoName"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:inputType="text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="주요 활동 장소"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/guSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="0.4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="선호 장르"
+                            android:padding="8dp"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/genreSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_introduce_register"
+                android:layout_marginStart="32dp"
+                android:layout_below="@+id/ll_busker_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/introduce"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/buskerIntroductionText"
+                android:layout_below="@+id/tv_introduce_register"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_margin="16sp"
+                android:padding="16sp"
+                android:textSize="14sp"
+                android:gravity="top"
+                android:background="@drawable/edit_text_box"
+                android:inputType="textMultiLine"
+                tools:ignore="LabelFor" />
+
+            <Button
+                android:id="@+id/confirmBuskerButton"
+                android:layout_below="@+id/buskerIntroductionText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/navigationViewBackground"
+                android:text="등록하기"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".buskerInfo.BuskerInfoActivity"
+    android:background="@color/mainBackground">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/busker_info_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:accessibilityHeading="false"
+        android:background="@color/navigationViewBackground"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="버스커 상세정보"
+        app:titleTextColor="@color/white" />
+
+    <GridLayout
+        android:id="@+id/gl_busker_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_below="@+id/busker_info_toolbar"
+        android:columnCount="2"
+        tools:ignore="UnknownId">
+
+        <ImageView
+            android:id="@+id/busker_info_photo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_rowSpan="4"
+            android:background="@color/mainBackground"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/busker_info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="@string/buskerInfoName"
+            android:padding="8dp"/>
+        <RelativeLayout>
+            <TextView
+                android:id="@+id/busker_info_jenre"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="@string/buskerInfoJenre"
+                android:padding="8dp"/>
+            <TextView
+                android:id="@+id/busker_info_jenre_item"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_toEndOf="@+id/busker_info_jenre"
+                android:paddingTop="8dp"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout>
+            <TextView
+                android:id="@+id/busker_info_place"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="@string/buskerInfoPlace"
+                android:padding="8dp"/>
+            <TextView
+                android:id="@+id/busker_info_place_item"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_toEndOf="@+id/busker_info_place"
+                android:paddingTop="8dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout>
+            <TextView
+                android:id="@+id/busker_info_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="@string/buskerInfoFavorite"
+                android:padding="8dp"/>
+            <ImageView
+                android:id="@+id/busker_info_favorite_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_favorite_border_white_24dp"
+                android:layout_toEndOf="@id/busker_info_favorite"
+                android:paddingTop="8dp"
+                android:contentDescription="@string/todo" />
+            <TextView
+                android:id="@+id/busker_info_favorite_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/busker_info_favorite_img"
+                android:background="@android:color/transparent"
+                android:paddingTop="8dp"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/white"
+                android:text="@string/favorite_cnt"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2">
+
+            <TextView
+                android:id="@+id/busker_info_introduce"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/introduce"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+            <TextView
+                android:id="@+id/busker_info_introduce_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/busker_info_introduce"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_marginTop="16sp"
+                android:layout_below="@+id/busker_info_introduce_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/busker_info_list"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                />
+        </RelativeLayout>
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tv_no_list_my_busking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gl_busker_info"
+        android:text="@string/no_list"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16sp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/lv_busker_info"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16sp"
+        android:layout_below="@+id/gl_busker_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="4dp"
+        android:divider="@color/mainBackground"
+        android:orientation="vertical"/>
+
+</RelativeLayout>

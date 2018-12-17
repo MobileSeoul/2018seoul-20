@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/itemBuskingBackground"
+    android:padding="8dp"
+    android:layout_margin="4dp">
+
+    <ImageView
+        android:id="@+id/like_busker_photo_item"
+        android:background="@color/itemBuskingBackground"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="4sp"/>
+
+    <TextView
+        android:id="@+id/busker_name"
+        android:layout_below="@id/like_busker_photo_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/buskerInfoName"/>
+
+    <TextView
+        android:id="@+id/textViewBuskingPlace"
+        android:layout_below="@id/busker_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="@string/place"
+        />
+
+    <TextView
+        android:id="@+id/tv_recommend_date_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewBuskingPlace"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="@string/date"/>
+
+    <TextView
+        android:id="@+id/textViewBuskingTime"
+        android:layout_below="@id/textViewBuskingPlace"
+        android:layout_alignEnd="@+id/like_busker_photo_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:drawableStart="@drawable/ic_access_time_white_18dp"
+        android:drawablePadding="4dp"
+        android:text="@string/time"/>
+
+
+</RelativeLayout>

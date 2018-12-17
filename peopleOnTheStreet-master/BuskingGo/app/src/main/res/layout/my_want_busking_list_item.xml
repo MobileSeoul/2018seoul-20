@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/itemBuskingBackground"
+    android:padding="8dp"
+    android:layout_margin="4dp">
+
+    <ImageView
+        android:id="@+id/want_photo_item"
+        android:background="@color/itemBuskingBackground"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="4sp"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <TextView
+        android:id="@+id/want_name_item"
+        android:layout_below="@id/want_photo_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/buskerInfoName"/>
+
+    <TextView
+        android:id="@+id/want_place"
+        android:layout_below="@id/want_name_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="장소 :"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/want_place_item"
+        android:layout_below="@id/want_name_item"
+        android:layout_toEndOf="@id/want_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/want_date_item"
+        android:layout_below="@id/want_place_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/date"/>
+
+    <TextView
+        android:id="@+id/want_time_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/want_place_item"
+        android:layout_alignEnd="@+id/want_photo_item"
+        android:layout_marginStart="16sp"
+        android:drawableStart="@drawable/ic_access_time_white_18dp"
+        android:drawablePadding="4dp"
+        android:text="@string/time"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:ellipsize="none"/>
+
+
+
+
+</RelativeLayout>

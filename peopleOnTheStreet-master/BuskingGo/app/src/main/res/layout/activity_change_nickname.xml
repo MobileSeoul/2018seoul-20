@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".configure.ConfigureActivity"
+    android:background="@color/mainBackground">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16sp"
+        android:layout_marginTop="16sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="닉네임 변경"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/changeNicknameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="변경할 닉네임"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,LabelFor"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/confirmNicknameButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="변경"
+            android:textColor="@color/white"
+            android:layout_marginTop="16sp"
+            android:backgroundTint="@color/navigationViewBackground"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</RelativeLayout>

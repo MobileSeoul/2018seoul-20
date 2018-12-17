@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#CF5917</color>
+    <color name="colorPrimaryDark">#6A2E0C</color>
+    <color name="colorAccent">#DC5E18</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="spaceGray">#c0c5ce</color>
+    <color name="mainBackground">#8F3E10</color>
+    <color name="navigationViewBackground">#4F2209</color>
+    <color name="itemBuskingBackground">#4F2209</color>
+
+    <color name="background_tab_pressed">#B54E14</color>
+
+</resources>

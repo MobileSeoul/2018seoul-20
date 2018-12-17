@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+
+    <ImageView
+        android:id="@+id/iv_center_place_above"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_place_black_32dp"
+        android:tint="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/iv_center_place"
+        android:contentDescription="@string/todo" />
+    <ImageView
+        android:id="@+id/iv_center_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_adjust_black_24dp"
+        android:tint="@color/colorPrimary"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/tv_add_addr"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="@string/notice_select_addr"
+        android:textSize="12sp"
+        android:textColor="#ffffff"
+        android:background="#c38f8f8f"/>
+
+    <com.nhn.android.maps.NMapView
+        android:id="@+id/map_view_non"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/tv_add_addr_now"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/btn_map_ok"
+        android:layout_margin="16dp"
+        android:background="@drawable/border"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        tools:ignore="RtlSymmetry" />
+    <Button
+        android:id="@+id/btn_map_ok"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/ok"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimaryDark"/>
+</RelativeLayout>
